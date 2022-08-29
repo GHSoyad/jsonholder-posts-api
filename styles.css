@@ -13,6 +13,13 @@ main {
     height: 100vh;
 }
 
+input {
+    text-align: center;
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 255, 0.5);
+}
+
 button {
     display: inline-block;
     padding: 5px 10px;
@@ -32,4 +39,56 @@ button {
 
 .post button {
     border-radius: 5px;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+#post-loader {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border: 3px solid black;
+    border-bottom-color: gainsboro;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: absolute;
+    top: 25%;
+    left: 48%;
+}
+
+.comment-loader {
+    display: none;
+    width: 12px;
+    height: 12px;
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
