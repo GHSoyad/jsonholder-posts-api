@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgba(0, 0, 255, 0.5);
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.post {
+    background-color: lightblue;
+    padding: 5px 30px 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.post button {
+    border-radius: 5px;
+}
