@@ -1,4 +1,11 @@
 document.getElementById('get-post').addEventListener('click', function () {
+    // Get post number value
+    const postNumberField = document.getElementById('post-number');
+    const postNumber = postNumberField.value;
+
+    if (postNumber < 1 || postNumber > 100) {
+        return alert('Post can only be between 1 - 100.');
+    }
     // Clear post container
     const postContainer = document.getElementById('post-section');
     postContainer.innerHTML = '';
@@ -14,9 +21,7 @@ document.getElementById('get-post').addEventListener('click', function () {
         })
 
     function displayPosts(posts) {
-        console.log(posts);
-
-        posts.slice(0, 10).map(post => {
+        posts.slice(0, `${postNumber}`).map(post => {
             const postDiv = document.createElement('div');
             postDiv.classList.add('post');
 
